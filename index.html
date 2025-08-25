@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moataz Ibrahim, P.Eng — The Clear Path Builder: Engineering × AI × Faith</title>
+  <meta name="description" content="Engineer & founder helping hardware teams validate fast, design to cost, and ship supplier‑ready work. CAD/DFM, AI systems, and faith‑rooted discipline." />
+  <meta name="theme-color" content="#1F2A44" />
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Build with Clarity. Ship what matters." />
+  <meta property="og:description" content="Engineer (P.Eng) × AI systems × faith‑rooted discipline. Clarity → Proof → Build." />
+  <meta property="og:image" content="https://source.unsplash.com/1600x900/?engineering,maker" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1F2A44', // Navy Slate
+            accent: '#22C55E',  // Emerald
+            gold: '#CC9A06',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    .glass { backdrop-filter: saturate(180%) blur(8px); background-color: rgba(255,255,255,0.8); }
+  </style>
+  <script>
+    // Simple dark mode toggle (stores preference)
+    function toggleTheme(){
+      const d = document.documentElement;
+      const isDark = d.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }
+    (function(){
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark') document.documentElement.classList.add('dark');
+    })();
+  </script>
+</head>
+<body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+  <!-- NAV -->
+  <header class="sticky top-0 z-30 border-b border-slate-200/60 dark:border-slate-800/60 bg-white/80 dark:bg-slate-950/70 glass">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#home" class="font-extrabold text-xl tracking-tight">Clear Path <span class="text-accent">Builder</span></a>
+      <nav class="hidden md:flex gap-6 text-sm font-medium">
+        <a class="hover:text-accent" href="#method">Method</a>
+        <a class="hover:text-accent" href="#services">Services</a>
+        <a class="hover:text-accent" href="#work">Work</a>
+        <a class="hover:text-accent" href="#tools">Tools</a>
+        <a class="hover:text-accent" href="#writing">Writing</a>
+        <a class="hover:text-accent" href="#about">About</a>
+        <a class="hover:text-accent" href="#contact">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="#contact" class="hidden sm:inline-flex items-center rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-white shadow hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-accent/50">Book a Clarity Call</a>
+        <button aria-label="Toggle dark mode" onclick="toggleTheme()" class="inline-flex items-center rounded-lg border border-slate-300/60 dark:border-slate-700/60 px-3 py-2 text-xs font-semibold hover:bg-slate-50 dark:hover:bg-slate-900">Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary via-slate-800 to-black opacity-90 dark:opacity-80"></div>
+    <svg class="absolute -right-24 -top-24 w-[40rem] h-[40rem] opacity-20" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path fill="#22C55E" d="M47.6,-73.4C60.8,-63,69.6,-48.1,75.4,-32.1C81.2,-16.1,84,0.9,78.9,14.2C73.9,27.4,61.1,36.8,48.5,46.2C35.8,55.6,23.3,65,7.7,74.8C-7.8,84.6,-27.5,94.8,-42.5,90.6C-57.4,86.4,-67.7,67.8,-73.6,49.7C-79.5,31.5,-81,13.8,-78.8,-2.3C-76.5,-18.4,-70.6,-32.8,-61.5,-44.3C-52.3,-55.8,-40,-64.2,-26.6,-74.2C-13.2,-84.2,1.4,-95.8,14.9,-94.2C28.4,-92.6,40.8,-77.7,47.6,-73.4Z" transform="translate(100 100)" />
+    </svg>
+    <div class="relative max-w-6xl mx-auto px-4 pt-24 pb-24 md:pt-28 md:pb-32 text-white">
+      <p class="text-xs uppercase tracking-widest/relaxed text-accent mb-3">Engineer × AI × Faith</p>
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight max-w-3xl">Build with Clarity. <span class="text-accent">Ship what matters.</span></h1>
+      <p class="mt-5 max-w-2xl text-lg md:text-xl text-slate-100/90">I help hardware founders and teams move from chaos to manufacturable reality. We validate fast, design to cost, and use faith‑rooted discipline to keep work honest. <span class="font-semibold">Clarity → Proof → Build.</span></p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#work" class="inline-flex items-center rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white shadow hover:opacity-95">See Work</a>
+        <a href="#contact" class="inline-flex items-center rounded-xl bg-white/10 ring-1 ring-white/30 px-5 py-3 text-sm font-semibold text-white hover:bg-white/15">Book a Clarity Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILLARS -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+          <h3 class="text-lg font-bold">Make it <span class="text-accent">Manufacturable</span></h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">DFM/DFA, clean drawings (GD&T), supplier‑trusted RFQs. No design theater.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+          <h3 class="text-lg font-bold">Make it <span class="text-accent">Provable</span></h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Validate in hours with AI‑assisted research. Cost targets before CAD depth.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+          <h3 class="text-lg font-bold">Make it <span class="text-accent">Meaningful</span></h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Prayer‑anchored routines, daily resets, service. Habits that improve delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHOD -->
+  <section id="method" class="py-16 md:py-20 bg-slate-50 dark:bg-slate-900/40">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="mb-8 flex items-end justify-between gap-4">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Method — <span class="text-accent">Clarity → Proof → Build</span></h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-6">
+          <span class="text-xs font-bold text-accent">Step 1</span>
+          <h3 class="mt-2 text-xl font-bold">Clarity</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Frame the problem, constraints, and target cost. Align stakeholders and define DONE.</p>
+        </div>
+        <div class="rounded-2xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-6">
+          <span class="text-xs font-bold text-accent">Step 2</span>
+          <h3 class="mt-2 text-xl font-bold">Proof</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">AI‑assisted validation, supplier discovery, and quote sanity checks. Decisions beat opinions.</p>
+        </div>
+        <div class="rounded-2xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-6">
+          <span class="text-xs font-bold text-accent">Step 3</span>
+          <h3 class="mt-2 text-xl font-bold">Build</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">CAD/DFM, clean drawings, and tight loops with suppliers until the thing ships.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="mb-8 flex items-end justify-between gap-4">
+        <h2 class="text-2xl md:text-3xl font-extrabold">What You Get</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+          <h3 class="font-bold">Manufacturable CAD & Drawings</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Supplier‑trusted outputs with clean GD&T and revision control.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+          <h3 class="font-bold">Design‑to‑Cost & DFM Review</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Fix cost drivers early; avoid tooling and MOQs burning cash.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+          <h3 class="font-bold">AI Systems for Hardware</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Prompts/agents to automate research, supplier outreach, and quote checks.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+          <h3 class="font-bold">Faith‑Rooted Discipline</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Simple routines (prayer‑anchored planning, daily resets, family check‑ins).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK / CASE STUDIES -->
+  <section id="work" class="py-16 md:py-20 bg-slate-50 dark:bg-slate-900/40">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="mb-8 flex items-end justify-between gap-4">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Selected Work</h2>
+        <a href="#contact" class="text-sm font-semibold text-accent">Need something similar? →</a>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Sergio Wash Station -->
+        <article class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+          <div class="h-40 bg-gradient-to-br from-primary to-slate-700"></div>
+          <div class="p-5">
+            <h3 class="font-bold">Wash Station Redesign (Sergio)</h3>
+            <ul class="mt-2 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside space-y-1">
+              <li>Standardized 38 mm accessory holes</li>
+              <li>Improved drainage: 3 cm pitch + lowered section</li>
+              <li>4 mm printable walls; larger enclosed legs</li>
+              <li>~9 cm rib spacing; ready for environment testing</li>
+            </ul>
+          </div>
+        </article>
+        <!-- Curl‑eeze Brush -->
+        <article class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+          <div class="h-40 bg-gradient-to-br from-accent to-green-900"></div>
+          <div class="p-5">
+            <h3 class="font-bold">Curl‑eeze Hair Tool</h3>
+            <ul class="mt-2 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside space-y-1">
+              <li>Material reset + manufacturable assemblies</li>
+              <li>Print‑to‑pilot with supplier‑ready drawings</li>
+              <li>Client education on constraints & cost drivers</li>
+            </ul>
+          </div>
+        </article>
+        <!-- Maltese Fidget Spinner -->
+        <article class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+          <div class="h-40 bg-gradient-to-br from-gold to-yellow-700"></div>
+          <div class="p-5">
+            <h3 class="font-bold">Maltese Cross Fidget Spinner</h3>
+            <ul class="mt-2 text-sm text-slate-600 dark:text-slate-300 list-disc list-inside space-y-1">
+              <li>Ergonomic, single‑piece body around 608 bearing</li>
+              <li>Four outer weights for balance; safety‑minded design</li>
+              <li>Praised for clarity, comms, and technical assistance</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS & AGENTS -->
+  <section id="tools" class="py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="mb-8 flex items-end justify-between gap-4">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Tools & Agents</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+          <h3 class="font-bold">60‑Minute Validation Script (Hardware)</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Reddit/forums mining → top complaints → demand & cost checks → go/no‑go.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+          <h3 class="font-bold">Supplier‑Outreach Agent</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Shortlists vendors, drafts emails, tracks replies against criteria.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+          <h3 class="font-bold">Quote Sanity Checker</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">COGS vs. target cost, MOQ/lead‑time risks, and negotiation prompts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WRITING -->
+  <section id="writing" class="py-16 md:py-20 bg-slate-50 dark:bg-slate-900/40">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="mb-8 flex items-end justify-between gap-4">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Writing</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <a class="group rounded-2xl border border-slate-200 dark:border-slate-800 p-6 block hover:bg-white dark:hover:bg-slate-950" href="https://prototypepathfinder.substack.com/" target="_blank" rel="noopener">
+          <h3 class="font-bold">Prototype Pathfinder</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">No‑waste validation and manufacturable design for hardware founders.</p>
+          <span class="mt-3 inline-block text-accent text-sm font-semibold group-hover:underline">Read the newsletter →</span>
+        </a>
+        <div class="rounded-2xl border border-dashed border-slate-200 dark:border-slate-800 p-6">
+          <h3 class="font-bold">Faith Focus Function</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Discipline for work, heart, and family — from pre‑Fajr to sleep adhkār.</p>
+          <span class="mt-3 inline-block text-slate-500 text-sm">(Link coming soon)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="mb-8 flex items-end justify-between gap-4">
+        <h2 class="text-2xl md:text-3xl font-extrabold">About Moataz</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <div class="space-y-4">
+          <p class="text-slate-700 dark:text-slate-300">I build things that work in the real world — and keep the work honest. I’m a Canadian Professional Engineer (P.Eng) focused on manufacturable design, a founder who uses AI systems to remove waste, and a Muslim who believes discipline, service, and family are part of doing great work.</p>
+          <ul class="text-sm text-slate-600 dark:text-slate-300 list-disc list-inside space-y-1">
+            <li>Founder, <strong>Clear Path Engineering</strong> — 5‑Day Starter Package, supplier‑ready outputs</li>
+            <li>Experience: Michelin North America; Outdoor‑Fit; Protocase; Neocon</li>
+            <li>Strengths: CAD/DFM, design‑to‑cost, client education, workflow automation</li>
+            <li>Focus: Canada & U.S. (global friendly), GCC‑minded</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+          <h3 class="font-bold">Signature CTA</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Start with clarity → 30‑min consult → DFM plan & next steps.</p>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <a href="#contact" class="inline-flex items-center rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white shadow hover:opacity-95">Book a Clarity Call</a>
+            <a href="#work" class="inline-flex items-center rounded-xl border border-slate-300 dark:border-slate-700 px-5 py-3 text-sm font-semibold">See Work</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-16 md:py-20 bg-slate-50 dark:bg-slate-900/40">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="mb-8 flex items-end justify-between gap-4">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Contact</h2>
+      </div>
+      <div class="grid md:grid-cols-4 gap-6">
+        <a class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 block hover:bg-white dark:hover:bg-slate-950" href="mailto:moataz.abdellah.ibrahim@gmail.com">
+          <h3 class="font-bold">Personal Email</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">moataz.abdellah.ibrahim@gmail.com</p>
+        </a>
+        <a class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 block hover:bg-white dark:hover:bg-slate-950" href="mailto:moataz@clearpathengineering.ca">
+          <h3 class="font-bold">Business Email</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">moataz@clearpathengineering.ca</p>
+        </a>
+        <a class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 block hover:bg-white dark:hover:bg-slate-950" href="https://www.linkedin.com/in/moataz-ibrahim/" target="_blank" rel="noopener">
+          <h3 class="font-bold">LinkedIn</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Connect & see case studies</p>
+        </a>
+        <a class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 block hover:bg-white dark:hover:bg-slate-950" href="#" target="_blank" rel="noopener">
+          <h3 class="font-bold">Book a Call</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">30‑min clarity call (Calendly)</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+      <p>© <span id="year"></span> Moataz Ibrahim, P.Eng — The Clear Path Builder</p>
+      <p class="text-slate-500">No AI hype. No design theater. Work that ships and serves.</p>
+    </div>
+  </footer>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Moataz Ibrahim",
+    "jobTitle": "Professional Engineer (P.Eng)",
+    "url": "",
+    "sameAs": [
+      "https://www.linkedin.com/in/moataz-ibrahim/",
+      "https://prototypepathfinder.substack.com/"
+    ],
+    "brand": {
+      "@type": "Brand",
+      "name": "Clear Path Engineering",
+      "slogan": "Build with Clarity. Ship what matters."
+    }
+  }
+  </script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
