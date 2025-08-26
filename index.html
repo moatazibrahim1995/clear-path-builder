@@ -14,7 +14,8 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = { theme: { extend: { colors: { primary:'#1F2A44', accent:'#22C55E', gold:'#CC9A06' }}}}
+    // Enable class-based dark mode so the Theme button works
+    tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary:'#1F2A44', accent:'#22C55E', gold:'#CC9A06' }}}}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,8 +61,6 @@
       podcast_title:"Podcast: Conversation on Building & Faith",podcast_desc:"An hour on work, clarity, and serving people well.",link_listen:"Listen on Spotify →",
       tools_title:"Tools & Learning",learn_title:"What I’m Learning",learn_1:"Practical Product Development (Maven) — Cohort 2",learn_2:"How to Pivot into Product Development",
       toolsdesk_title:"Tools on My Desk",tool_printer:"Creality Ender-3 V3 SE",tool_moddakir:"Moddakir — Quran with teachers",
-      hire_title:"Hire Me",hire_desc:"If you’re a first-time founder or a community org that needs help building something useful, reach out.",
-      hire_email:"Email",hire_contact:"Contact form",
       contact_title:"Contact",personal_email:"Personal Email",business_email:"Business Email",linkedin_card:"LinkedIn",upwork_card:"Upwork",upwork_desc:"See recent projects",
       footer_left:"© <span id='year'></span> Moataz Ibrahim — Faith × Work × Service",footer_right:"Do the useful thing. Keep the heart clean."},
 
@@ -83,8 +82,6 @@
       podcast_title:"بودكاست: حديث حول البناء والإيمان",podcast_desc:"ساعة عن العمل والوضوح وخدمة الناس.",link_listen:"استمع على سبوتيفاي →",
       tools_title:"الأدوات والتعلّم",learn_title:"ما أتعلّمه",learn_1:"التطوير العملي للمنتجات (Maven) — الدفعة الثانية",learn_2:"كيف تتحول إلى تطوير المنتجات",
       toolsdesk_title:"أدواتي",tool_printer:"Creality Ender-3 V3 SE",tool_moddakir:"مدّكّر — تلاوة القرآن مع معلّمين",
-      hire_title:"تعاون معي",hire_desc:"إن كنت مؤسِّسًا مبتدئًا أو جهة مجتمعية وتحتاج لبناء شيء نافع، تواصل معي.",
-      hire_email:"بريد إلكتروني",hire_contact:"نموذج تواصل",
       contact_title:"تواصل",personal_email:"البريد الشخصي",business_email:"بريد العمل",linkedin_card:"لينكدإن",upwork_card:"أب وورك",upwork_desc:"اطلع على المشاريع الأخيرة",
       footer_left:"© <span id='year'></span> معاذ إبراهيم — إيمان × عمل × خدمة",footer_right:"افعل الشيء النافع، واحفظ قلبك نظيفًا."
       }};
@@ -159,9 +156,11 @@
         <h3 class="text-sm font-semibold uppercase tracking-wide mb-3 text-slate-500" data-i18n="quick_links">Quick Links</h3>
         <ul class="space-y-2 text-sm">
           <li><a class="underline decoration-accent/40 hover:text-accent" href="assets/Moataz-Ibrahim-CV.pdf" target="_blank" rel="noopener" data-i18n="link_cv">Download CV (PDF)</a></li>
-          <li><a class="underline decoration-accent/40 hover:text-accent" href="https://chat.openai.com" target="_blank" rel="noopener" data-i18n="link_khutba">Khutba Pro — Custom GPT</a></li>
+          <!-- FIXED: Khutba Pro points to the custom GPT URL -->
+          <li><a class="underline decoration-accent/40 hover:text-accent" href="https://chatgpt.com/g/g-68add25588b88191a666d4bd6f86505a-khutba-pro" target="_blank" rel="noopener" data-i18n="link_khutba">Khutba Pro — Custom GPT</a></li>
           <li><a class="underline decoration-accent/40 hover:text-accent" href="https://prototypepathfinder.substack.com/" target="_blank" rel="noopener" data-i18n="link_substack">Prototype Pathfinder (Substack)</a></li>
-          <li><a class="underline decoration-accent/40 hover:text-accent" href="#" target="_blank" rel="noopener" data-i18n="link_podcast">Podcast Episode on Spotify</a></li>
+          <!-- FIXED: Podcast link to Spotify episode -->
+          <li><a class="underline decoration-accent/40 hover:text-accent" href="https://open.spotify.com/episode/0iswiPwFz57BnTt5mKq1dj?si=_E56zvJCQmqTJ_2qNLgGOQ" target="_blank" rel="noopener" data-i18n="link_podcast">Podcast Episode on Spotify</a></li>
         </ul>
       </aside>
     </div>
@@ -179,7 +178,8 @@
           <p class="text-sm text-slate-600 dark:text-slate-300 mb-4" data-i18n="cpe_desc">...</p>
           <div class="flex gap-4 text-sm">
             <a href="https://www.clearpathengineering.ca/" target="_blank" rel="noopener" class="underline decoration-accent/40 hover:text-accent" data-i18n="link_site">Website →</a>
-            <a href="https://www.linkedin.com/company/clear-path-engineering/" target="_blank" rel="noopener" class="underline decoration-accent/40 hover:text-accent" data-i18n="link_linkedin">LinkedIn →</a>
+            <!-- FIXED: LinkedIn URL -->
+            <a href="https://www.linkedin.com/company/clearpathengineering" target="_blank" rel="noopener" class="underline decoration-accent/40 hover:text-accent" data-i18n="link_linkedin">LinkedIn →</a>
             <a href="https://www.upwork.com/freelancers/~01e7a0e1a6b70d0da5" target="_blank" rel="noopener" class="underline decoration-accent/40 hover:text-accent" data-i18n="link_upwork">Upwork →</a>
           </div>
         </article>
@@ -188,14 +188,16 @@
         <article class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
           <h3 class="font-semibold text-lg mb-1" data-i18n="webinar_title">No-Waste Prototype Plan — Webinar</h3>
           <p class="text-sm text-slate-600 dark:text-slate-300 mb-4" data-i18n="webinar_desc">...</p>
-          <a href="#" target="_blank" rel="noopener" class="underline decoration-accent/40 hover:text-accent text-sm" data-i18n="link_watch">Watch on LinkedIn →</a>
+          <!-- FIXED: Webinar link to LinkedIn event theater -->
+          <a href="https://www.linkedin.com/events/theno-wasteprototypeplan-freewo7363232556483321856/theater/" target="_blank" rel="noopener" class="underline decoration-accent/40 hover:text-accent text-sm" data-i18n="link_watch">Watch on LinkedIn →</a>
         </article>
 
         <!-- Khutba GPT -->
         <article class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
           <h3 class="font-semibold text-lg mb-1" data-i18n="khutba_title">Khutba Pro — Custom GPT</h3>
           <p class="text-sm text-slate-600 dark:text-slate-300 mb-4" data-i18n="khutba_desc">...</p>
-          <a href="#" target="_blank" rel="noopener" class="underline decoration-accent/40 hover:text-accent text-sm">Demo soon →</a>
+          <!-- FIXED: point to the custom GPT everywhere -->
+          <a href="https://chatgpt.com/g/g-68add25588b88191a666d4bd6f86505a-khutba-pro" target="_blank" rel="noopener" class="underline decoration-accent/40 hover:text-accent text-sm">Open the GPT →</a>
         </article>
       </div>
     </div>
@@ -209,12 +211,14 @@
         <article class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
           <h3 class="font-semibold" data-i18n="youth_title">Pictou County Youth Club</h3>
           <p class="text-sm text-slate-600 dark:text-slate-300 mb-3" data-i18n="youth_desc">...</p>
-          <a href="#" target="_blank" rel="noopener" class="underline decoration-accent/40 hover:text-accent text-sm" data-i18n="link_visit">Visit the page →</a>
+          <!-- FIXED: external link -->
+          <a href="https://pictoucounty-youth-club-67w1uv3.gamma.site/" target="_blank" rel="noopener" class="underline decoration-accent/40 hover:text-accent text-sm" data-i18n="link_visit">Visit the page →</a>
         </article>
         <article class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
           <h3 class="font-semibold" data-i18n="mishkat_title">Mishkat — Instagram (@miskhat.hfx)</h3>
           <p class="text-sm text-slate-600 dark:text-slate-300 mb-3" data-i18n="mishkat_desc">...</p>
-          <a href="#" target="_blank" rel="noopener" class="underline decoration-accent/40 hover:text-accent text-sm" data-i18n="link_see_posts">See posts →</a>
+          <!-- FIXED: Instagram link -->
+          <a href="https://www.instagram.com/miskhat.hfx/" target="_blank" rel="noopener" class="underline decoration-accent/40 hover:text-accent text-sm" data-i18n="link_see_posts">See posts →</a>
         </article>
       </div>
     </div>
@@ -234,7 +238,8 @@
         <article class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
           <h3 class="font-semibold" data-i18n="podcast_title">Podcast: Conversation on Building & Faith</h3>
           <p class="text-sm text-slate-600 dark:text-slate-300 mb-3" data-i18n="podcast_desc">...</p>
-          <a href="#" target="_blank" rel="noopener" class="underline decoration-accent/40 hover:text-accent text-sm" data-i18n="link_listen">Listen on Spotify →</a>
+          <!-- FIXED: Spotify episode URL -->
+          <a href="https://open.spotify.com/episode/0iswiPwFz57BnTt5mKq1dj?si=_E56zvJCQmqTJ_2qNLgGOQ" target="_blank" rel="noopener" class="underline decoration-accent/40 hover:text-accent text-sm" data-i18n="link_listen">Listen on Spotify →</a>
         </article>
       </div>
     </div>
@@ -260,14 +265,7 @@
             <li data-i18n="tool_moddakir">Moddakir — Quran with teachers</li>
           </ul>
         </article>
-        <article class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
-          <h3 class="font-semibold mb-2" data-i18n="hire_title">Hire Me</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-300 mb-3" data-i18n="hire_desc">...</p>
-          <div class="text-sm flex flex-wrap gap-4">
-            <a href="mailto:moataz.abdellah.ibrahim@gmail.com" class="underline decoration-accent/40 hover:text-accent" data-i18n="hire_email">Email</a>
-            <a href="https://calendly.com/moataz-clearpathengineering/first-contact" target="_blank" rel="noopener" class="underline decoration-accent/40 hover:text-accent" data-i18n="hire_contact">Contact form</a>
-          </div>
-        </article>
+        <!-- REMOVED: Hire Me card per request (email + Calendly link) -->
       </div>
     </div>
   </section>
